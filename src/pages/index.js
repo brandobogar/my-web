@@ -11,7 +11,6 @@ import About from "../../Components/about/About";
 import Skills from "../../Components/skills/Skills";
 import Footer from "../../Components/footer/Footer";
 
-const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
