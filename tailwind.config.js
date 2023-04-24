@@ -20,15 +20,18 @@ module.exports = {
         oxygen: ["Oxygen", "sans-serif"],
       },
       screens: {
-        phone: { min: "360px", max: "479px" },
+        phone: { max: "479px" },
         tablet: { min: "480px", max: "768px" },
         // => @media (min-width: 640px) { ... }
 
-        laptop: "1024px",
+        laptop: { min: "767px", max: "1024px" },
         // => @media (min-width: 1024px) { ... }
 
-        desktop: "1280px",
+        desktop: { min: "1025px" },
         // => @media (min-width: 1280px) { ... }
+      },
+      boxShadow: {
+        glass: "0 4px 30px rgba(0, 0, 0, 0.1)",
       },
     },
   },

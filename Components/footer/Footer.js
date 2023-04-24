@@ -3,7 +3,7 @@ import React from "react";
 function Footer() {
   return (
     <>
-      <footer className="flex flex-row w-full h-1/2 bg-myblack2 text-mywhite justify-evenly  p-10 text-xl font-oxygen items-center phone:flex-col">
+      <footer className="flex flex-row w-full h-1/2 bg-myblack2 text-mywhite justify-evenly  p-10 text-xl font-oxygen items-center bottom-0 phone:flex-col">
         <div className="h-full justify-center items-center">
           <h1 className="text-2xl">Brando Margendy Bogar</h1>
         </div>
