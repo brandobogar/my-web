@@ -54,7 +54,7 @@ export default function Index() {
     <>
       <Layout pagetitle={"Todo App"} desc={"brando website features"}>
         <div className="flex flex-col items-center justify-start h-full w-screen mt-40 ">
-          <h1 className="text-4xl font-semibold">Todo App</h1>
+          <h1 className="text-4xl font-semibold text-myblack">Todo App</h1>
           <form
             onSubmit={handleFormSubmit}
             className="flex flex-row gap-4 m-10 w-1/2 phone:flex-col  phone:w-full phone:px-10"
@@ -78,7 +78,7 @@ export default function Index() {
               {todos.map((todo, index) => (
                 <li
                   key={index}
-                  className="flex flex-row justify-around w-full text-xl mb-6"
+                  className="flex flex-row justify-around w-full text-xl mb-6 text-myblack"
                 >
                   <div className="w-3/4">{todo}</div>
                   <div className="w-1/4 flex flex-row items-end justify-end gap-5 ">
@@ -98,7 +98,9 @@ export default function Index() {
               <div className="relative w-3/5 my-6 mx-auto phone:w-full phone:mx-4  ">
                 <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none h-48">
                   <div className="flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t">
-                    <h3 className="text-3xl font-semibold">Edit</h3>
+                    <h3 className="text-3xl font-semibold text-myblack">
+                      Edit
+                    </h3>
                   </div>
                   <div className=" text-xl flex justify-center items-center w-full h-full">
                     <form

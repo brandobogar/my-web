@@ -32,7 +32,7 @@ export default function Lyrics() {
           Click Me!!!
         </button>
         {randomIndex !== null && (
-          <div className="h-1/4 w-1/2 text-center flex flex-col gap-10">
+          <div className="h-1/4 w-1/2 text-center flex flex-col gap-10 text-myblack">
             <h2 className="text-3xl">Today&apos;s lyrics:</h2>
             <p className="text-2xl">{quote}</p>
             <p className="text-xl">~ {name} ~</p>
