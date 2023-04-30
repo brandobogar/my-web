@@ -33,7 +33,7 @@ export default function Sentiment() {
       >
         <main className="flex flex-col items-center justify-center h-screen font-oxygen">
           <div className="flex flex-col gap-8 h-96 items-center justify-center border-8roundedp-10border-myblack2">
-            <h1 className="text-3xl text-center">
+            <h1 className="text-3xl text-center text-myblack">
               Welcome!
               <br /> Let&apos;s see how the world feels about your team.{" "}
             </h1>
@@ -41,13 +41,16 @@ export default function Sentiment() {
               className="flex flex-col gap-4 items-center"
               onSubmit={handleSubmit}
             >
-              <label className="text-xl">Enter a full team name</label>
+              <label className="text-xl text-myblack">
+                Enter a full team name
+              </label>
               <div>
                 <input
                   type="text"
                   placeholder="Enter your team name"
                   value={teamName}
                   onChange={handleTeamInput}
+                  className="bg-white"
                 />
               </div>
               <div>
