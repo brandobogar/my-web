@@ -1,74 +1,41 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Layout from "../../../../Components/features/layout/layout";
-import { Router } from "next/router";
-import Link from "next/link";
-import { Axios } from "axios";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFaceFrown, faFaceSmile } from "@fortawesome/free-solid-svg-icons";
+import { faFaceMeh } from "@fortawesome/free-regular-svg-icons";
+// import sentiment from "sentiment";
 
-export default function Sentiment() {
-  const [teamName, setTeamName] = useState("");
-  const [showPage, setShowPage] = useState(false);
+export default function _sentiment() {
+  const [text, setText] = React.useState("");
+  const [result, setResult] = React.useState("");
 
-  const handleTeamInput = (e) => {
-    setTeamName(e.target.value);
+  const handleTextChange = (event) => {
+    setText(event.target.value);
   };
 
-  const handlePageUnderConstruction = (fa) => {
-    setShowPage(true);
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (teamName.length > 5) {
-      console.log(teamName);
-    } else {
-      console.log("That doesn't appear to be a valid name");
-    }
+  const handleAnalyse = () => {
+    var Sentiment = require("sentiment");
+    var sentiment = new Sentiment();
+    const res = sentiment.analyze(text);
+    setResult(`Score: ${res.score}, Comparative: ${res.comparative}`);
   };
 
   return (
-    <>
-      <Layout
-        pagetitle={"Sentiment Analysis"}
-        desc={"football club sentiment analysis in twitter"}
-      >
-        <main className="flex flex-col items-center justify-center h-screen font-oxygen">
-          <div className="flex flex-col gap-8 h-96 items-center justify-center border-8roundedp-10border-myblack2">
-            <h1 className="text-3xl text-center text-myblack">
-              Welcome!
-              <br /> Let&apos;s see how the world feels about your team.{" "}
-            </h1>
-            <form
-              className="flex flex-col gap-4 items-center"
-              onSubmit={handleSubmit}
-            >
-              <label className="text-xl text-myblack">
-                Enter a full team name
-              </label>
-              <div>
-                <input
-                  type="text"
-                  placeholder="Enter your team name"
-                  value={teamName}
-                  onChange={handleTeamInput}
-                  className="bg-white"
-                />
-              </div>
-              <div>
-                <button
-                  type="submit"
-                  className="bg-myteal p-2 border-myteal border-2 rounded-xl shadow-lg"
-                  onClick={handlePageUnderConstruction}
-                >
-                  Check On Team
-                </button>
-              </div>
-            </form>
-            {showPage ? (
-              <h2 className="text-3xl font-bold">Page under construction!!!</h2>
-            ) : null}
-          </div>
-        </main>
-      </Layout>
-    </>
+    <Layout pagetitle={"Sentiment"} desc={"sentiment analysis"}>
+      <div className="flex flex-col items-center justify-center h-screen w-full gap-10">
+        <h1 className="text-2xl">Sentiment analysis</h1>
+
+        <textarea value={text} onChange={handleTextChange}></textarea>
+        <button
+          className="bg-teal-500 text-white active:bg-teal-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+          type="button"
+          onClick={handleAnalyse}
+        >
+          Analyze
+        </button>
+
+        <p>{result}</p>
+      </div>
+    </Layout>
   );
 }
