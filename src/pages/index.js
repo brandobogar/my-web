@@ -1,16 +1,9 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from "next/font/google";
+import Image from "next/image";
 import styles from "myweb/styles/Home.module.css";
 import Link from "next/link";
-import Navbar from "../../Components/Navbar/Navbar";
-import Project from "../../Components/project/project";
-import Education from "../../Components/education/Education";
-import Social from "../../Components/social/Social";
-import About from "../../Components/about/About";
-import Skills from "../../Components/skills/Skills";
-import Footer from "../../Components/footer/Footer";
-import Nav from "../../Components/Navbar/Nav";
+import Components from "../../Components/Component";
+
 export default function Home() {
   return (
     <>
@@ -20,7 +13,8 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Nav />
+      <Components.Nav />
+
       {/* <Navbar /> */}
       <main className={styles.main} id="top">
         <Image
@@ -39,7 +33,7 @@ export default function Home() {
             A Front-end Developer based in Manado, Indonesia
           </p>
         </div>
-        <Social />
+        <Components.Social />
 
         <Link
           href="https://statichunt.com/demo/nextjs-hydrogen"
@@ -50,22 +44,22 @@ export default function Home() {
         </Link>
       </main>
       <aside id="project" className="text-myblack">
-        <Project />
+        <Components.Project />
       </aside>
       <aside id="about" className="text-myblack">
-        <About />
+        <Components.About />
       </aside>
       <aside id="resume" className="text-myblack">
-        <Education />
+        <Components.Education />
       </aside>
       <aside className="text-myblack">
-        <Skills />
+        <Components.Skills />
       </aside>
       <aside className="text-myblack">
-        <Footer />
+        <Components.Footer />
       </aside>
     </>
   );
 }
 
-// ? harus lanjut cari tau apa itu tentang abouut ato m ganti ato hapus
+// !! Jangan lupa git push untuk beberapa file
