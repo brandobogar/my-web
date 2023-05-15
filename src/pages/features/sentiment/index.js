@@ -22,12 +22,12 @@ export default function _sentiment() {
 
   return (
     <Layout pagetitle={"Sentiment"} desc={"sentiment analysis"}>
-      <div className="flex flex-col items-center justify-center h-screen w-full gap-10">
+      <div className="flex flex-col items-center justify-center w-full h-screen gap-10">
         <h1 className="text-2xl">Sentiment analysis</h1>
 
         <textarea value={text} onChange={handleTextChange}></textarea>
         <button
-          className="bg-teal-500 text-white active:bg-teal-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+          className="px-6 py-3 mb-1 mr-1 text-sm font-bold text-white uppercase transition-all duration-150 ease-linear bg-teal-500 rounded shadow outline-none active:bg-teal-600 hover:shadow-lg focus:outline-none"
           type="button"
           onClick={handleAnalyse}
         >

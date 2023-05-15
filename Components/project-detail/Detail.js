@@ -4,8 +4,8 @@ export default class Detail extends Component {
   render() {
     return (
       <>
-        <div className=" w-108 h-64 border-4 border-myteal flex flex-col p-4 pl-8 justify-evenly text-myblack border-opacity-70 rounded-bl-3xl rounded-tr-3xl phone:h-full">
-          <div className="mb-2  text-lg font-bold ">
+        <div className="flex flex-col h-64 p-4 pl-8 border-4  w-108 border-myteal justify-evenly text-myblack border-opacity-70 rounded-bl-3xl rounded-tr-3xl phone:h-full">
+          <div className="mb-2 text-lg font-bold ">
             <h1>{this.props.topic}</h1>
           </div>
 

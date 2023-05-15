@@ -6,10 +6,10 @@ export default function project() {
     <>
       <div className="flex flex-col items-center text-center">
         <div className="mt-20">
-          <div className="text-4xl pt-10 underline">
+          <div className="pt-10 text-4xl underline">
             <h1>PROJECT</h1>
           </div>
-          <div className="grid grid-cols-2 gap-20 p-20 text-left w-screen  phone:grid-cols-1 tablet:grid-cols-1">
+          <div className="grid w-screen grid-cols-2 gap-20 p-20 text-left phone:grid-cols-1 tablet:grid-cols-1">
             <Detail
               topic="AI/Machine Learning"
               date="06-2021"

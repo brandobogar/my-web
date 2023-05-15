@@ -6,16 +6,16 @@ import { faCircleHalfStroke as halfCircle } from "@fortawesome/free-solid-svg-ic
 export default function Skills() {
   return (
     <>
-      <div className="flex flex-col items-center justify-center mt-20 mb-20 font-oxygen w-screen">
-        <div className="text-4xl pt-10 underline mt-10">
+      <div className="flex flex-col items-center justify-center w-screen mt-20 mb-20 font-oxygen">
+        <div className="pt-10 mt-10 text-4xl underline">
           <h1>SKILLS & ABILITIES</h1>
         </div>
-        <div className="flex flex-row gap-10 mt-10 w-screen justify-evenly p-40 text-myblack phone:flex-col phone:p-8 tablet:flex-col">
+        <div className="flex flex-row w-screen gap-10 p-40 mt-10 justify-evenly text-myblack phone:flex-col phone:p-8 tablet:flex-col">
           <ul>
-            <h1 className="text-xl font-bold pb-5">Graphics Designer</h1>
+            <h1 className="pb-5 text-xl font-bold">Graphics Designer</h1>
             <div className="flex flex-col justify-between gap-2">
               <ul className="text-lg">
-                <li className=" flex flex-row justify-between gap-5 items-center">
+                <li className="flex flex-row items-center justify-between gap-5 ">
                   <p>Adobe Photoshop</p>
                   <span className="flex flex-row">
                     <FontAwesomeIcon icon={fullCirlce} />
@@ -25,7 +25,7 @@ export default function Skills() {
                     <FontAwesomeIcon icon={emptyCirlce} />
                   </span>
                 </li>
-                <li className="flex flex-row justify-between gap-5 items-center">
+                <li className="flex flex-row items-center justify-between gap-5">
                   <p>Adobe Illustrator</p>
                   <span className="flex flex-row">
                     <FontAwesomeIcon icon={fullCirlce} />
@@ -39,10 +39,10 @@ export default function Skills() {
             </div>
           </ul>
           <ul>
-            <h1 className="text-xl font-bold pb-5">Machine Learning</h1>
+            <h1 className="pb-5 text-xl font-bold">Machine Learning</h1>
             <div className="flex flex-col justify-between gap-5">
               <ul className="text-lg">
-                <li className="flex flex-row justify-between gap-5 items-center">
+                <li className="flex flex-row items-center justify-between gap-5">
                   <p>Python</p>
                   <span className="flex flex-row">
                     <FontAwesomeIcon icon={fullCirlce} />
@@ -52,7 +52,7 @@ export default function Skills() {
                     <FontAwesomeIcon icon={emptyCirlce} />
                   </span>
                 </li>
-                <li className="flex flex-row justify-between gap-5 items-center">
+                <li className="flex flex-row items-center justify-between gap-5">
                   <p>Tensorflow</p>
                   <span className="flex flex-row">
                     <FontAwesomeIcon icon={fullCirlce} />
@@ -66,10 +66,10 @@ export default function Skills() {
             </div>
           </ul>
           <ul>
-            <h1 className="text-xl font-bold pb-5">Front-end developer</h1>
+            <h1 className="pb-5 text-xl font-bold">Front-end developer</h1>
             <div className="flex flex-col justify-between gap-5">
               <ul className="text-lg">
-                <li className="flex flex-row justify-between gap-5 items-center">
+                <li className="flex flex-row items-center justify-between gap-5">
                   <p>React</p>
                   <span className="flex flex-row">
                     <FontAwesomeIcon icon={fullCirlce} />

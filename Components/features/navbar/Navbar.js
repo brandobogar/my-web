@@ -8,17 +8,17 @@ export default function Navbar({ fixed }) {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
   return (
     <>
-      <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 bg-myteal mb-3 font-oxygen text-myblack text-xl font-medium shadow-xl">
-        <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
-          <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
+      <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 mb-3 text-xl font-medium shadow-xl bg-myteal font-oxygen text-myblack">
+        <div className="container flex flex-wrap items-center justify-between px-4 mx-auto">
+          <div className="relative flex justify-between w-full lg:w-auto lg:static lg:block lg:justify-start">
             <Link
-              className="  inline-block mr-4 py-2 whitespace-nowrap  "
+              className="inline-block py-2 mr-4  whitespace-nowrap"
               href="/"
             >
               Home
             </Link>
             <button
-              className=" cursor-pointer -none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+              className="block px-3 py-1 bg-transparent border border-transparent border-solid rounded outline-none cursor-pointer  -none lg:hidden focus:outline-none"
               type="button"
               onClick={() => setNavbarOpen(!navbarOpen)}
             >
@@ -32,10 +32,10 @@ export default function Navbar({ fixed }) {
             }
             id="example-navbar-danger"
           >
-            <ul className="flex flex-col lg:flex-row list-none lg:ml-auto ">
+            <ul className="flex flex-col list-none lg:flex-row lg:ml-auto ">
               <li className="nav-item">
                 <Link
-                  className="px-3 py-2 flex items-center    leading-snug  hover:opacity-75"
+                  className="flex items-center px-3 py-2 leading-snug hover:opacity-75"
                   href="/features/sentiment"
                   scroll={false}
                 >
@@ -44,7 +44,7 @@ export default function Navbar({ fixed }) {
               </li>
               <li className="nav-item">
                 <Link
-                  className="px-3 py-2 flex items-center    leading-snug  hover:opacity-75"
+                  className="flex items-center px-3 py-2 leading-snug hover:opacity-75"
                   href="/features/todo"
                   scroll={false}
                 >
@@ -53,7 +53,7 @@ export default function Navbar({ fixed }) {
               </li>
               <li className="nav-item">
                 <Link
-                  className="px-3 py-2 flex items-center    leading-snug  hover:opacity-75"
+                  className="flex items-center px-3 py-2 leading-snug hover:opacity-75"
                   href="/features/lyrics"
                   scroll={false}
                 >

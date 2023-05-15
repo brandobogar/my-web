@@ -25,10 +25,10 @@ export default function Home() {
           className="rounded-full"
           hidden
         />
-        <div className="text-center  flex flex-col justify-around gap-2 text-myblack phone:mx-5">
+        <div className="flex flex-col justify-around gap-2 text-center text-myblack phone:mx-5">
           <h1 className="text-5xl font-oxygen ">Hi there!</h1>
           <h1 className="text-4xl font-oxygen ">I am Brando Margendy Bogar</h1>
-          <h2 className="text-2xl mt-2">Front-end Developer</h2>
+          <h2 className="mt-2 text-2xl">Front-end Developer</h2>
           <p className="text-xl">
             A Front-end Developer based in Manado, Indonesia
           </p>

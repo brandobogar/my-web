@@ -10,17 +10,17 @@ export default function NavDump({ fixed }) {
   const [showFeature, setShowFeature] = React.useState(false);
   return (
     <>
-      <nav className="fixed w-full flex flex-wrap items-center justify-between px-2 py-3 bg-myteal mb-3 font-oxygen text-myblack text-xl font-medium shadow-xl">
-        <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
-          <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
+      <nav className="fixed flex flex-wrap items-center justify-between w-full px-2 py-3 mb-3 text-xl font-medium shadow-xl bg-myteal font-oxygen text-myblack">
+        <div className="container flex flex-wrap items-center justify-between px-4 mx-auto">
+          <div className="relative flex justify-between w-full lg:w-auto lg:static lg:block lg:justify-start">
             <Link
-              className="  inline-block mr-4 py-2 whitespace-nowrap  "
+              className="inline-block py-2 mr-4  whitespace-nowrap"
               href="/"
             >
               Brando Bogar
             </Link>
             <button
-              className=" cursor-pointer -none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+              className="block px-3 py-1 bg-transparent border border-transparent border-solid rounded outline-none cursor-pointer  -none lg:hidden focus:outline-none"
               type="button"
               onClick={() => setNavbarOpen(!navbarOpen)}
             >
@@ -34,10 +34,10 @@ export default function NavDump({ fixed }) {
             }
             id="example-navbar-danger"
           >
-            <ul className="flex flex-col lg:flex-row list-none lg:ml-auto ">
+            <ul className="flex flex-col list-none lg:flex-row lg:ml-auto ">
               <li className="nav-item">
                 <Link
-                  className="px-3 py-2 flex items-center    leading-snug  hover:opacity-75"
+                  className="flex items-center px-3 py-2 leading-snug hover:opacity-75"
                   href="#project"
                   scroll={false}
                 >
@@ -46,7 +46,7 @@ export default function NavDump({ fixed }) {
               </li>
               <li className="nav-item">
                 <Link
-                  className="px-3 py-2 flex items-center    leading-snug  hover:opacity-75"
+                  className="flex items-center px-3 py-2 leading-snug hover:opacity-75"
                   href="#resume"
                   scroll={false}
                 >
@@ -55,7 +55,7 @@ export default function NavDump({ fixed }) {
               </li>
               <li className="nav-item">
                 <Link
-                  className="px-3 py-2 flex items-center    leading-snug  hover:opacity-75"
+                  className="flex items-center px-3 py-2 leading-snug hover:opacity-75"
                   href="#about"
                   scroll={false}
                 >
@@ -64,7 +64,7 @@ export default function NavDump({ fixed }) {
               </li>
               <li className="nav-item">
                 <button
-                  className="px-3 py-2 flex items-center    leading-snug  "
+                  className="flex items-center px-3 py-2 leading-snug "
                   onClick={() => setShowFeature(!showFeature)}
                 >
                   <span className="ml-2">Features</span>
@@ -76,13 +76,13 @@ export default function NavDump({ fixed }) {
                         : "hidden")
                     }
                   >
-                    <li className="flex flex-col justify-center items-center  w-full p-2">
+                    <li className="flex flex-col items-center justify-center w-full p-2">
                       <Link href={"/features/lyrics"}>Lyrics</Link>
                     </li>
-                    <li className="flex flex-col justify-center items-center  w-full p-2">
+                    <li className="flex flex-col items-center justify-center w-full p-2">
                       <Link href={"/features/sentiment"}>Sentiment</Link>
                     </li>
-                    <li className="flex flex-col justify-center items-center  w-full p-2">
+                    <li className="flex flex-col items-center justify-center w-full p-2">
                       <Link href={"/features/todo"}>Todo</Link>
                     </li>
                   </ul>

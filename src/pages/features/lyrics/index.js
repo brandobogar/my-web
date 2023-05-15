@@ -27,12 +27,12 @@ export default function Lyrics() {
       pagetitle={"Lyrics quote"}
       desc={"generate a random lyrics from song with singer"}
     >
-      <div className="flex flex-col justify-start items-center h-full w-full mt-40 font-oxygen">
+      <div className="flex flex-col items-center justify-start w-full h-full mt-40 font-oxygen">
         <button onClick={generateRandomIndex} className={style.button2}>
           Click Me!!!
         </button>
         {randomIndex !== null && (
-          <div className="h-1/4 w-1/2 text-center flex flex-col gap-10 text-myblack">
+          <div className="flex flex-col w-1/2 gap-10 text-center h-1/4 text-myblack">
             <h2 className="text-3xl">Today&apos;s lyrics:</h2>
             <p className="text-2xl">{quote}</p>
             <p className="text-xl">~ {name} ~</p>

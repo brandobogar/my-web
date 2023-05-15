@@ -53,35 +53,35 @@ export default function Index() {
   return (
     <>
       <Layout pagetitle={"Todo App"} desc={"brando website features"}>
-        <div className="flex flex-col items-center justify-start h-full w-screen mt-40 ">
+        <div className="flex flex-col items-center justify-start w-screen h-full mt-40 ">
           <h1 className="text-4xl font-semibold text-myblack">Todo App</h1>
           <form
             onSubmit={handleFormSubmit}
-            className="flex flex-row gap-4 m-10 w-1/2 phone:flex-col  phone:w-full phone:px-10"
+            className="flex flex-row w-1/2 gap-4 m-10 phone:flex-col phone:w-full phone:px-10"
           >
             <input
               type="text"
               placeholder="Enter a new todo"
               onChange={handleInputChange}
               value={newTodo}
-              className="px-2 py-1 placeholder-slate-300 text-slate-600 bg-white rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring w-full"
+              className="w-full px-2 py-1 text-sm bg-white border-0 rounded shadow outline-none placeholder-slate-300 text-slate-600 focus:outline-none focus:ring"
             />
             <button
               type="submit"
-              className="bg-teal-500 text-white active:bg-teal-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none   ease-linear transition-all duration-150"
+              className="px-6 py-3 text-sm font-bold text-white uppercase transition-all duration-150 ease-linear bg-teal-500 rounded shadow outline-none active:bg-teal-600 hover:shadow-lg focus:outline-none"
             >
               SUBMIT
             </button>
           </form>
-          <div className="flex flex-col w-1/2 h-full justify-start phone:w-full phone:px-10">
+          <div className="flex flex-col justify-start w-1/2 h-full phone:w-full phone:px-10">
             <ul>
               {todos.map((todo, index) => (
                 <li
                   key={index}
-                  className="flex flex-row justify-around w-full text-xl mb-6 text-myblack"
+                  className="flex flex-row justify-around w-full mb-6 text-xl text-myblack"
                 >
                   <div className="w-3/4">{todo}</div>
-                  <div className="w-1/4 flex flex-row items-end justify-end gap-5 ">
+                  <div className="flex flex-row items-end justify-end w-1/4 gap-5 ">
                     <button onClick={() => handleTodoEdit(todo)}>
                       <FontAwesomeIcon icon={faPenToSquare} />
                     </button>
@@ -94,15 +94,15 @@ export default function Index() {
             </ul>
           </div>
           {showModal ? (
-            <div className="justify-center items-center flex overflow-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline ">
-              <div className="relative w-3/5 my-6 mx-auto phone:w-full phone:mx-4  ">
-                <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none h-48">
-                  <div className="flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t">
+            <div className="fixed inset-0 z-50 flex items-center justify-center overflow-hidden overflow-y-auto outline-none focus:outline ">
+              <div className="relative w-3/5 mx-auto my-6 phone:w-full phone:mx-4 ">
+                <div className="relative flex flex-col w-full h-48 bg-white border-0 rounded-lg shadow-lg outline-none focus:outline-none">
+                  <div className="flex items-start justify-between p-5 border-b border-solid rounded-t border-slate-200">
                     <h3 className="text-3xl font-semibold text-myblack">
                       Edit
                     </h3>
                   </div>
-                  <div className=" text-xl flex justify-center items-center w-full h-full">
+                  <div className="flex items-center justify-center w-full h-full text-xl ">
                     <form
                       onSubmit={handleTodoUpdate}
                       className="flex flex-col w-full p-4 phone:flex-col"
@@ -112,11 +112,11 @@ export default function Index() {
                         value={newTodo}
                         onChange={handleInputChange}
                         placeholder="Edit todo"
-                        className="px-2 py-1 placeholder-slate-300 text-slate-600 bg-white rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring w-3/4 phone:h-10"
+                        className="w-3/4 px-2 py-1 text-sm bg-white border-0 rounded shadow outline-none placeholder-slate-300 text-slate-600 focus:outline-none focus:ring phone:h-10"
                       />
-                      <div className="flex flex-row w-1/4 items-center mt-5 gap-10 phone:justify-start phone:mt-2 phone:gap-5 ">
+                      <div className="flex flex-row items-center w-1/4 gap-10 mt-5 phone:justify-start phone:mt-2 phone:gap-5 ">
                         <button
-                          className="bg-green-500 text-white active:bg-pink-600 font-bold uppercase  px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 flex gap-2 flex-row text-xs"
+                          className="flex flex-row gap-2 px-4 py-2 mb-1 mr-1 text-xs font-bold text-white uppercase transition-all duration-150 ease-linear bg-green-500 rounded shadow outline-none active:bg-pink-600 hover:shadow-md focus:outline-none"
                           type="submit"
                         >
                           <i>
@@ -125,7 +125,7 @@ export default function Index() {
                           Save
                         </button>
                         <button
-                          className="bg-red-500 text-white active:bg-pink-600 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 flex gap-2 flex-row"
+                          className="flex flex-row gap-2 px-4 py-2 mb-1 mr-1 text-xs font-bold text-white uppercase transition-all duration-150 ease-linear bg-red-500 rounded shadow outline-none active:bg-pink-600 hover:shadow-md focus:outline-none"
                           onClick={handleModalClose}
                         >
                           <i>
