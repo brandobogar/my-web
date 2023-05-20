@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Layout from "../../../../Components/features/layout/layout";
-
+import MyHead from "../../../../Components/features/head/myHead";
 import {
   faPenToSquare,
   faXmarkCircle,
@@ -52,7 +52,13 @@ export default function Index() {
 
   return (
     <>
-      <Layout pagetitle={"Todo App"} desc={"brando website features"}>
+      <Layout>
+        <MyHead
+          pageTitle={"Todo App"}
+          desc={"brando website features"}
+          keyword={"todoapp, nextjs, portfolio website"}
+          author={"Brando Margendy Bogar"}
+        />
         <div className="flex flex-col items-center justify-start w-screen h-full mt-40 ">
           <h1 className="text-4xl font-semibold text-myblack">Todo App</h1>
           <form

@@ -2,7 +2,7 @@ import Layout from "../../../../Components/features/layout/layout";
 import lyrics from "../../api/lyrics.json";
 import React from "react";
 import style from "./index.module.css";
-
+import MyHead from "../../../../Components/features/head/myHead";
 export default function Lyrics() {
   const [randomIndex, setRandomIndex] = React.useState(null);
   const [quote, setQuote] = React.useState("");
@@ -23,10 +23,14 @@ export default function Lyrics() {
   };
 
   return (
-    <Layout
-      pagetitle={"Lyrics quote"}
-      desc={"generate a random lyrics from song with singer"}
-    >
+    <Layout>
+      <MyHead
+        keyword={"lyrics, api, generate random"}
+        desc={"generate a random lyrics from song with singer"}
+        pageTitle={"Lyrics quote"}
+        author={"Brando Margendy Bogar"}
+      />
+
       <div className="flex flex-col items-center justify-start w-full h-full mt-40 font-oxygen">
         <button onClick={generateRandomIndex} className={style.button2}>
           Click Me!!!

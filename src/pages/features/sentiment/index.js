@@ -1,5 +1,6 @@
 import React from "react";
 import Layout from "../../../../Components/features/layout/layout";
+import MyHead from "../../../../Components/features/head/myHead";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFaceFrown, faFaceSmile } from "@fortawesome/free-solid-svg-icons";
 import { faFaceMeh } from "@fortawesome/free-regular-svg-icons";
@@ -21,7 +22,13 @@ export default function _sentiment() {
   };
 
   return (
-    <Layout pagetitle={"Sentiment"} desc={"sentiment analysis"}>
+    <Layout>
+      <MyHead
+        pageTitle={"Sentiment"}
+        desc={"sentiment analysis"}
+        author={"Brando Margendy Bogar"}
+        keyword={"sentiment, sentiment analyis, node js"}
+      />
       <div className="flex flex-col items-center justify-center w-full h-screen gap-10">
         <h1 className="text-2xl">Sentiment analysis</h1>
 

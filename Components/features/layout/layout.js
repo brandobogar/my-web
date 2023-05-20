@@ -1,14 +1,9 @@
-import Head from "next/head";
 import Footer from "../../footer/Footer";
 import Navbar from "../navbar/Navbar";
 
-export default function Layout({ children, pagetitle, desc }) {
+export default function Layout({ children }) {
   return (
     <>
-      <Head>
-        <title>{pagetitle} | Brando Bogar</title>
-        <meta name="description" content={desc} />
-      </Head>
       <div>
         <Navbar />
       </div>
