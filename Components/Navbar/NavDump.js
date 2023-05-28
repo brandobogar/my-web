@@ -1,5 +1,3 @@
-//! komponen navbar boiler
-
 import React from "react";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -10,7 +8,7 @@ export default function NavDump({ fixed }) {
   const [showFeature, setShowFeature] = React.useState(false);
   return (
     <>
-      <nav className="fixed flex flex-wrap items-center justify-between w-full px-2 py-3 mb-3 text-xl font-medium shadow-xl bg-myteal font-oxygen text-myblack">
+      <nav className="fixed flex flex-wrap items-center justify-between w-full px-2 py-3 mb-3 text-xl font-medium shadow-xl bg-myteal font-oxygen text-myblack top-0">
         <div className="container flex flex-wrap items-center justify-between px-4 mx-auto">
           <div className="relative flex justify-between w-full lg:w-auto lg:static lg:block lg:justify-start">
             <Link

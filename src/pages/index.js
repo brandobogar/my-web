@@ -15,7 +15,6 @@ export default function Home() {
       </Head>
       <Components.Nav />
 
-      {/* <Navbar /> */}
       <main className={styles.main} id="top">
         <Image
           src="/profil.jpg"
@@ -43,23 +42,26 @@ export default function Home() {
           Web referensi
         </Link>
       </main>
-      <aside id="project" className="text-myblack">
-        <Components.Project />
-      </aside>
-      <aside id="about" className="text-myblack">
-        <Components.About />
-      </aside>
-      <aside id="resume" className="text-myblack">
-        <Components.Education />
-      </aside>
-      <aside className="text-myblack">
-        <Components.Skills />
-      </aside>
-      <aside className="text-myblack">
-        <Components.Footer />
-      </aside>
+      <div className="divide-y divide-slate-300">
+        <aside id="project" className="text-myblack">
+          <Components.Project />
+        </aside>
+        <aside id="about" className="text-myblack">
+          <Components.About />
+        </aside>
+        <aside id="resume" className="text-myblack">
+          <Components.Education />
+        </aside>
+        <aside className="text-myblack">
+          <Components.Skills />
+        </aside>
+        <aside className="text-myblack">
+          <Components.Review />
+        </aside>
+        <aside>
+          <Components.Footer />
+        </aside>
+      </div>
     </>
   );
 }
-
-// !! Jangan lupa git push untuk beberapa file

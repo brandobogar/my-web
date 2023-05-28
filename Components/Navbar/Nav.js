@@ -1,16 +1,15 @@
-//! komponen navbar boiler
-
-import React from "react";
+import { useState, useRef, useEffect } from "react";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 
 export default function NavDump({ fixed }) {
-  const [navbarOpen, setNavbarOpen] = React.useState(false);
-  const [showFeature, setShowFeature] = React.useState(false);
+  const [navbarOpen, setNavbarOpen] = useState(false);
+  const [showFeature, setShowFeature] = useState(false);
+
   return (
     <>
-      <nav className="fixed flex flex-wrap items-center justify-between w-full px-2 py-3 mb-3 text-xl font-medium shadow-xl bg-myteal font-oxygen text-myblack">
+      <nav className=" fixed flex flex-wrap items-center justify-between w-full px-2 py-3 mb-3 text-xl font-medium shadow-xl bg-myteal font-oxygen text-myblack top-0">
         <div className="container flex flex-wrap items-center justify-between px-4 mx-auto">
           <div className="relative flex justify-between w-full lg:w-auto lg:static lg:block lg:justify-start">
             <Link
@@ -20,7 +19,7 @@ export default function NavDump({ fixed }) {
               Brando Bogar
             </Link>
             <button
-              className="block px-3 py-1 bg-transparent border border-transparent border-solid rounded outline-none cursor-pointer  -none lg:hidden focus:outline-none"
+              className="block px-3 py-1 bg-transparent border border-transparent border-solid rounded outline-none cursor-pointer  lg:hidden focus:outline-none"
               type="button"
               onClick={() => setNavbarOpen(!navbarOpen)}
             >
@@ -76,14 +75,23 @@ export default function NavDump({ fixed }) {
                         : "hidden")
                     }
                   >
-                    <li className="flex flex-col items-center justify-center w-full p-2">
-                      <Link href={"/features/lyrics"}>Lyrics</Link>
+                    <li className="flex flex-col items-center justify-center w-full h-full p-2">
+                      <Link href={"/features/lyrics"} className="w-full h-full">
+                        Lyrics
+                      </Link>
                     </li>
-                    <li className="flex flex-col items-center justify-center w-full p-2">
-                      <Link href={"/features/sentiment"}>Sentiment</Link>
+                    <li className="flex flex-col items-center justify-center w-full h-full p-2">
+                      <Link
+                        href={"/features/sentiment"}
+                        className="w-full h-full"
+                      >
+                        Sentiment
+                      </Link>
                     </li>
-                    <li className="flex flex-col items-center justify-center w-full p-2">
-                      <Link href={"/features/todo"}>Todo</Link>
+                    <li className="flex flex-col items-center justify-center w-full h-full p-2">
+                      <Link href={"/features/todo"} className="w-full h-full">
+                        Todo
+                      </Link>
                     </li>
                   </ul>
                 </button>

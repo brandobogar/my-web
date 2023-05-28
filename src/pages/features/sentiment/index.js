@@ -1,10 +1,10 @@
 import React from "react";
 import Layout from "../../../../Components/features/layout/layout";
-import MyHead from "../../../../Components/features/head/myHead";
+import MyHead from "../../../../Components/features/head/MyHead";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFaceFrown, faFaceSmile } from "@fortawesome/free-solid-svg-icons";
 import { faFaceMeh } from "@fortawesome/free-regular-svg-icons";
-// import sentiment from "sentiment";
+import UI from "../../../../Components/ui/UI";
 
 export default function _sentiment() {
   const [text, setText] = React.useState("");
@@ -30,18 +30,17 @@ export default function _sentiment() {
         keyword={"sentiment, sentiment analyis, node js"}
       />
       <div className="flex flex-col items-center justify-center w-full h-screen gap-10">
-        <h1 className="text-2xl">Sentiment analysis</h1>
+        <h1 className="text-3xl text-myblack">Sentiment analysis</h1>
 
-        <textarea value={text} onChange={handleTextChange}></textarea>
-        <button
-          className="px-6 py-3 mb-1 mr-1 text-sm font-bold text-white uppercase transition-all duration-150 ease-linear bg-teal-500 rounded shadow outline-none active:bg-teal-600 hover:shadow-lg focus:outline-none"
-          type="button"
-          onClick={handleAnalyse}
-        >
-          Analyze
-        </button>
+        <textarea
+          value={text}
+          onChange={handleTextChange}
+          placeholder="Enter a sentences"
+          className="bg-white w-48 text-myblack h-24 p-2 resize-none"
+        ></textarea>
+        <UI.Button type={"button"} onClick={handleAnalyse} title={"Analyze"} />
 
-        <p>{result}</p>
+        <p className="text-myblack">{result}</p>
       </div>
     </Layout>
   );

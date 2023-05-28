@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Layout from "../../../../Components/features/layout/layout";
-import MyHead from "../../../../Components/features/head/myHead";
+import MyHead from "../../../../Components/features/head/MyHead";
 import {
   faPenToSquare,
   faXmarkCircle,
@@ -8,6 +8,7 @@ import {
   faTrashCan,
 } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import UI from "../../../../Components/ui/UI";
 
 export default function Index() {
   const [todos, setTodos] = useState([]);
@@ -72,12 +73,7 @@ export default function Index() {
               value={newTodo}
               className="w-full px-2 py-1 text-sm bg-white border-0 rounded shadow outline-none placeholder-slate-300 text-slate-600 focus:outline-none focus:ring"
             />
-            <button
-              type="submit"
-              className="px-6 py-3 text-sm font-bold text-white uppercase transition-all duration-150 ease-linear bg-teal-500 rounded shadow outline-none active:bg-teal-600 hover:shadow-lg focus:outline-none"
-            >
-              SUBMIT
-            </button>
+            <UI.Button type={"submit"} title={"SUBMIT"} />
           </form>
           <div className="flex flex-col justify-start w-1/2 h-full phone:w-full phone:px-10">
             <ul>
