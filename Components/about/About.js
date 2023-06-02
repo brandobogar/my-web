@@ -5,7 +5,7 @@ export default function About() {
   return (
     <>
       <div className="flex flex-col items-center justify-center w-screen h-full p-20 mt-10 font-oxygen phone:p-0">
-        <div className="pt-10 text-4xl underline">
+        <div className="pt-10 text-4xl underline phone:text-3xl">
           <h1>ABOUT</h1>
         </div>
         <div className="flex flex-row items-center m-20 phone:flex-col tablet:flex-col">

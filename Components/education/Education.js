@@ -2,7 +2,7 @@ export default function Education() {
   return (
     <>
       <div className="flex flex-col items-center justify-center w-full h-full py-10 font-oxygen phone:mx-5">
-        <h1 className="text-4xl underline ">EDUCATION</h1>
+        <h1 className="text-4xl underline phone:text-3xl">EDUCATION</h1>
         <ul className="list-disc list-outside">
           <li className="mt-12">
             <h3 className="text-2xl phone:text-xl">

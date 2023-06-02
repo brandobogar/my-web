@@ -6,7 +6,7 @@ export default function project() {
     <>
       <div className="flex flex-col items-center text-center">
         <div className="mt-20">
-          <div className="pt-10 text-4xl underline">
+          <div className="pt-10 text-4xl underline phone:text-3xl">
             <h1>PROJECT</h1>
           </div>
           <div className="grid w-screen grid-cols-2 gap-20 p-20 text-left phone:grid-cols-1 tablet:grid-cols-1">

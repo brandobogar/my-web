@@ -1,5 +1,6 @@
-import React from "react";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPhone } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 function Footer() {
   return (
     <>
@@ -10,8 +11,19 @@ function Footer() {
         <div className="flex flex-col justify-end h-full text-right phone:text-center phone:mt-5">
           <h1>Contact me</h1>
           <div className="flex flex-row justify-between gap-10 m-2 mr-0 phone:flex-col phone:justify-center phone:gap-0 ">
-            <h1>(+62)82293462449</h1>
-            <h1>brandobogar@gmail.com</h1>
+            <h1>
+              {" "}
+              <span className="mr-3">
+                <FontAwesomeIcon icon={faPhone} />
+              </span>
+              (+62)82293462449{" "}
+            </h1>
+            <h1>
+              <span className="mr-3">
+                <FontAwesomeIcon icon={faEnvelope} />
+              </span>
+              brandobogar@gmail.com{" "}
+            </h1>
           </div>
         </div>
       </footer>

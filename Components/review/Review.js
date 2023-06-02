@@ -3,17 +3,29 @@ import React from "react";
 import UI from "../ui/UI";
 
 function Review() {
-  const getTime = () => {
-    const currentDate = new Date();
-    const formattedTimestamp = currentDate.toLocaleString();
-    return formattedTimestamp;
-  };
+  // const getTime = () => {
+  //   const currentDate = new Date();
+  //   const formattedTimestamp = currentDate.toLocaleString();
+  //   return formattedTimestamp;
+  // };
+  const [currentTime, setCurrentTime] = React.useState(
+    new Date().toLocaleString()
+  );
+
+  React.useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTime(new Date().toLocaleString());
+    }, 1000);
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
 
   const [data, setData] = React.useState({
     name: "",
     email: "",
     review: "",
-    time: getTime(),
+    time: currentTime,
   });
   const [showModal, setShowModal] = React.useState(false);
 
@@ -34,7 +46,7 @@ function Review() {
         console.log(response);
       });
 
-    console.log(getTime);
+    console.log(currentTime);
     setShowModal(!showModal);
   };
 
@@ -45,22 +57,22 @@ function Review() {
 
   return (
     <>
-      <div className="flex flex-col justify-center items-center h-screen w-full">
-        <h1 className="text-2xl text-myblack mb-4">Leave a Review!</h1>
+      <div className="flex flex-col items-center justify-center w-full h-screen">
+        <h1 className="mb-4 text-2xl text-myblack">Leave a Review!</h1>
         <form
-          className="flex flex-col justify-center items-center gap-5 h-3/4 w-3/4 border-solid border-2 border-slate-300 rounded-md p-10"
+          className="flex flex-col items-center justify-center w-3/4 gap-5 p-10 border-2 border-solid rounded-md h-3/4 border-slate-300"
           onSubmit={submitHandler}
         >
-          <div className="gap-2 flex-col w-full flex  ">
+          <div className="flex flex-col w-full gap-2 ">
             <label>Time</label>
             <input
-              value={data.time}
+              value={currentTime}
               name="time"
-              className="px-2 py-1 placeholder-slate-300 text-slate-600  bg-white rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring w-full"
+              className="w-full px-2 py-1 text-sm bg-white border-0 rounded shadow outline-none placeholder-slate-300 text-slate-600 focus:outline-none focus:ring"
               readOnly
             />
           </div>
-          <div className="flex gap-2 flex-col w-full">
+          <div className="flex flex-col w-full gap-2">
             <label>
               Name<span className="text-red-900">*</span>
             </label>
@@ -70,11 +82,11 @@ function Review() {
               name="name"
               value={data.name}
               onChange={changeHandler}
-              className="px-2 py-1 placeholder-slate-300 text-slate-600  bg-white rounded text-sm border-0 shadow outline-none  focus:outline-none focus:ring w-full"
+              className="w-full px-2 py-1 text-sm bg-white border-0 rounded shadow outline-none placeholder-slate-300 text-slate-600 focus:outline-none focus:ring"
               required
             />
           </div>
-          <div className="flex gap-2 flex-col w-full">
+          <div className="flex flex-col w-full gap-2">
             <label>
               Email<span className="text-red-900">*</span>
             </label>
@@ -84,11 +96,11 @@ function Review() {
               name="email"
               value={data.email}
               onChange={changeHandler}
-              className="px-2 py-1 placeholder-slate-300 text-slate-600  bg-white rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring w-full"
+              className="w-full px-2 py-1 text-sm bg-white border-0 rounded shadow outline-none placeholder-slate-300 text-slate-600 focus:outline-none focus:ring"
               required
             />
           </div>
-          <div className="flex gap-2 flex-col w-full">
+          <div className="flex flex-col w-full gap-2">
             <label>
               Review<span className="text-red-900">*</span>
             </label>
@@ -98,7 +110,7 @@ function Review() {
               name="review"
               value={data.review}
               onChange={changeHandler}
-              className="px-2 py-1 placeholder-slate-300 text-slate-600  bg-white rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring w-full h-20 resize-none"
+              className="w-full h-20 px-2 py-1 text-sm bg-white border-0 rounded shadow outline-none resize-none placeholder-slate-300 text-slate-600 focus:outline-none focus:ring"
               required
             />
           </div>
@@ -112,23 +124,23 @@ function Review() {
         </form>
         {showModal ? (
           <>
-            <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
-              <div className="relative w-auto my-6 mx-auto max-w-sm">
+            <div className="fixed inset-0 z-50 flex items-center justify-center overflow-x-hidden overflow-y-auto outline-none focus:outline-none">
+              <div className="relative w-auto max-w-sm mx-auto my-6">
                 {/*content*/}
-                <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+                <div className="relative flex flex-col w-full bg-white border-0 rounded-lg shadow-lg outline-none focus:outline-none">
                   {/*header*/}
 
                   {/*body*/}
-                  <div className="relative p-4 flex-auto">
-                    <p className="my-4 text-slate-500 text-lg leading-relaxed">
+                  <div className="relative flex-auto p-4">
+                    <p className="my-4 text-lg leading-relaxed text-slate-500">
                       Thank&apos;s {data.name}
                       <br /> for reviewing my portfolio website
                     </p>
                   </div>
                   {/*footer*/}
-                  <div className="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
+                  <div className="flex items-center justify-end p-6 border-t border-solid rounded-b border-slate-200">
                     <button
-                      className="bg-emerald-500 text-white active:bg-red-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                      className="px-6 py-3 mb-1 mr-1 text-sm font-bold text-white uppercase transition-all duration-150 ease-linear rounded shadow outline-none bg-emerald-500 active:bg-red-600 hover:shadow-lg focus:outline-none"
                       type="button"
                       onClick={closeModal}
                     >
@@ -138,7 +150,7 @@ function Review() {
                 </div>
               </div>
             </div>
-            <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
+            <div className="fixed inset-0 z-40 bg-black opacity-25"></div>
           </>
         ) : null}
       </div>

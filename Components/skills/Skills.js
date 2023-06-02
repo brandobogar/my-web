@@ -7,7 +7,7 @@ export default function Skills() {
   return (
     <>
       <div className="flex flex-col items-center justify-center w-screen mt-20 mb-20 font-oxygen">
-        <div className="pt-10 mt-10 text-4xl underline">
+        <div className="pt-10 mt-10 text-4xl underline phone:text-3xl">
           <h1>SKILLS & ABILITIES</h1>
         </div>
         <div className="flex flex-row w-screen gap-10 p-40 mt-10 justify-evenly text-myblack phone:flex-col phone:p-8 tablet:flex-col">

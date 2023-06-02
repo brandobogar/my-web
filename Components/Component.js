@@ -7,7 +7,7 @@ import Footer from "./footer/Footer";
 import Nav from "./Navbar/Nav";
 import NavDump from "./Navbar/NavDump";
 import Review from "./review/Review";
-import UI from "./ui/UI";
+
 const Components = {
   Project,
   Education,
@@ -18,7 +18,6 @@ const Components = {
   Nav,
   NavDump,
   Review,
-  UI,
 };
 
 export default Components;

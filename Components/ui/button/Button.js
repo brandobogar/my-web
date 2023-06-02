@@ -3,11 +3,11 @@ import React from "react";
 function Button({ title, onClick, type }) {
   return (
     <button
-      class="w-32 bg-white tracking-wide text-gray-800 font-bold rounded border-b-2 border-emerald-400 hover:border-emerald-400 hover:bg-emerald-400 hover:text-white shadow-md py-2 px-6 inline-flex items-center"
+      className="inline-flex items-center px-6 py-2 font-bold tracking-wide text-gray-800 bg-white border-b-2 rounded shadow-md min-w-max border-myteal hover:border-myteal hover:bg-myteal hover:text-white"
       onClick={onClick}
       type={type}
     >
-      <span class="mx-auto">{title}</span>
+      <span className="mx-auto">{title}</span>
     </button>
   );
 }

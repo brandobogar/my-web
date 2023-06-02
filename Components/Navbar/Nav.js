@@ -3,23 +3,20 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 
-export default function NavDump({ fixed }) {
+export default function Nav({ fixed }) {
   const [navbarOpen, setNavbarOpen] = useState(false);
   const [showFeature, setShowFeature] = useState(false);
 
   return (
     <>
-      <nav className=" fixed flex flex-wrap items-center justify-between w-full px-2 py-3 mb-3 text-xl font-medium shadow-xl bg-myteal font-oxygen text-myblack top-0">
+      <nav className="fixed top-0 flex flex-wrap items-center justify-between w-full px-2 py-3 mb-3 text-xl font-medium shadow-xl bg-myteal font-oxygen text-myblack">
         <div className="container flex flex-wrap items-center justify-between px-4 mx-auto">
           <div className="relative flex justify-between w-full lg:w-auto lg:static lg:block lg:justify-start">
-            <Link
-              className="inline-block py-2 mr-4  whitespace-nowrap"
-              href="/"
-            >
+            <Link className="inline-block py-2 mr-4 whitespace-nowrap" href="/">
               Brando Bogar
             </Link>
             <button
-              className="block px-3 py-1 bg-transparent border border-transparent border-solid rounded outline-none cursor-pointer  lg:hidden focus:outline-none"
+              className="block px-3 py-1 bg-transparent border border-transparent border-solid rounded outline-none cursor-pointer lg:hidden focus:outline-none"
               type="button"
               onClick={() => setNavbarOpen(!navbarOpen)}
             >
@@ -71,7 +68,7 @@ export default function NavDump({ fixed }) {
                     className={
                       " text-xl " +
                       (showFeature
-                        ? "absolute flex flex-col h-auto w-40 divide-y-2 bg-slate-50 justify-evenly items-center rounded-lg z-50 top-16 right-1 shadow-2xl"
+                        ? "absolute flex flex-col h-auto w-40 divide-y-2 bg-slate-50 justify-evenly items-center rounded-lg z-50 top-16 right-3 drop-shadow-2xl tablet:left-3 tablet:top-60 phone:left-3 phone:top-60"
                         : "hidden")
                     }
                   >
