@@ -10,7 +10,7 @@ function MyHead({ pageTitle, desc, author, keyword }) {
         name="format-detection"
         content="telephone=no, date=no, email=no, address=no"
       />
-      <title>{pageTitle} | Brando Bogar&apos;s Website</title>
+      <title>{pageTitle}</title>
     </Head>
   );
 }
